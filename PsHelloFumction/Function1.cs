@@ -20,6 +20,7 @@ namespace PsHelloFumction
             
             string name = req.Query["name"];
 
+
             string requestBody = new StreamReader(req.Body).ReadToEnd();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
