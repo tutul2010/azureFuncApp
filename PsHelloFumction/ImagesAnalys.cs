@@ -22,6 +22,7 @@ namespace PsHelloFumction
         // generate sas signature for private acces of blob
         public static string GetSas(CloudBlockBlob blob)
         {
+
             var sasPolicy = new SharedAccessBlobPolicy
             {
                 Permissions=SharedAccessBlobPermissions.Read,
