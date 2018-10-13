@@ -11,8 +11,7 @@ namespace PsHelloFumction
         [FunctionName("ImagesAnalys")]
         public static void Run( [BlobTrigger("images/{name}", Connection = "ImgStorage")]
                                 CloudBlockBlob blob, string name, 
-                                TraceWriter log
-                              )
+                                TraceWriter log )
         {
             log.Info($"C# Blob trigger function Processed blob\n Name:{blob.Name} \n Size: {blob.Properties.Length} Bytes");
             var sas = GetSas(blob);
